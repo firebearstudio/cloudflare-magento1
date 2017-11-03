@@ -33,3 +33,8 @@ IP list - the extension shows the list of visitors IP addresses for last 24 hour
 Statistics - see CloudFlare® statistic for you store (Pageviews, Unique visitors, Reuqests & Bandwidth saved by CloudFlare®).
 
 Real visitor IP - if you use CloudFlare® with Magento store, you can’t get more real IP addresses of you customers anywhere in Magento admin and core because all requests are handled by CloudFlare®, so you get only different CloudFlare® IP’s. With this build-in CloudFlare® Control extension you can get real visitors IPs.
+
+<img src="https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-extension-api_1.png" />
+<img src="https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-control-stats-threat_1.png" />
+<img src="https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-extension_1.png" />
+https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-extension_1.png
