@@ -1,3 +1,7 @@
+<a href="https://firebearstudio.com/the-improved-import.html" title="Magento 2 Scheduled Import & Export , mapping , xml">Improved Import for Magento 2</a>
+
+<a href="https://firebearstudio.com/magento-extensions/magento2extensions" title="Magento 2 Extensions">Firebear Magento 2 Extensions</a>
+
 With CloudFlare® control Magento extension you can control main features of CloudFlare® directly from your Magento admin page. CloudFlare® Control extension supports all the main methods of CloudFlare® API. You can save a lot of time working with CloudFlare® settings directly from Magento backend, so this is a must have extension for any Magento store what use CloudFlare.
 
 Before using this extension, you should set up CloudFlare® for your Magento domain. If you don’t use CloudFlare® yet, you can Sign Up and test the free version.
@@ -5,8 +9,6 @@ Before using this extension, you should set up CloudFlare® for your Magento dom
 Upgrade to recent CloudFlare API v4 (https://www.cloudflare.com/docs/next/) now in progress - show IP list and update snapshot features not works temporary. We offer free upgrade for all customers - you can purchase now and use all main features already!
 
 CloudFlare® Control Magento extension features
-
-
 
 Security profile - switch your current security CloudFlare® profile (Off / Low / Medium / High / Attack)
 
