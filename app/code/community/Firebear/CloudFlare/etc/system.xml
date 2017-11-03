@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<config>
+
+    <tabs>
+        <Firebear translate="label">
+            <label>Firebear</label>
+            <sort_order>220</sort_order>
+        </Firebear>
+    </tabs>
+
+    <sections>
+        <cloudflare translate="label" module="cloudflare">
+            <label>CloudFlare Control</label>
+            <tab>Firebear</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <sort_order>1000</sort_order>
+            <groups>
+                
+                <apioptions translate="label">
+                    <label>API Access details</label>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <sort_order>2</sort_order>
+                    <fields>
+                        
+                        <api_email translate="label">
+                            <label>E-Mail</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[E-Mail associated with cloudflare account.]]></comment>
+                        </api_email>
+                        <api_key translate="label">
+                            <label>API Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[This is the CloudFlare API key made available on your <a href="https://www.cloudflare.com/my-account.html" target="_blank">Account</a> page.]]></comment>
+                        </api_key>
+                        
+			            <check translate="label">
+			                <label></label>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_button</frontend_model>
+			                <sort_order>40</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store></show_in_store>
+			                <comment><![CDATA[Once you check you API access, please click Save Setting for begin use extension. If you continue get error about wrong API access, try click Save Config and then check & load settings again. <br /><b>IMPORTANT NOTE:</b> If you update settings from CloudFlare admin, you should always click this button for get updated settings before change it from Magento!]]></comment>
+			            </check>
+
+                    </fields>
+                </apioptions>
+                
+                <overview translate="label">
+                    <label>Settings overview</label>
+                    <comment>You can adjust your overall security and performance profiles on this tab, as well as some other important settings. After changes on this tab, please click Save Config button in right corner for update CloudFlare settings!</comment>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <sort_order>3</sort_order>
+                    <fields>  
+                        
+                        <security translate="label comment">
+                            <label>Security profile</label>
+                            <comment>Choose the appropriate security profile for your website, which will automatically adjust each of the security settings. If you choose to customize an individual security setting, the profile will become Custom.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cloudflare/system_config_source_dropdown_security</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>	
+                        </security>
+                        
+                        <cachelvl translate="label comment">
+                            <label>Caching level</label>
+                            <comment><![CDATA[Adjust your caching level to modify CloudFlare's caching behavior. <a href="https://support.cloudflare.com/hc/en-us/articles/200168256" target="_blank">Learn more…</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cloudflare/system_config_source_dropdown_cachelvl</source_model>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>	
+                        </cachelvl>
+                        
+                        <devmode translate="label">
+                            <label>Development Mode</label>
+                            <comment><![CDATA[Temporarily enter development mode on your websites. <a href="https://support.cloudflare.com/hc/en-us/articles/200168246" target="_blank">Learn more…</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>                            
+                        </devmode>
+                        
+                        <cache translate="label">
+			                <label>Purge cache</label>
+			                <comment><![CDATA[Immediately purge cached resources for your website.<a href="https://support.cloudflare.com/hc/en-us/articles/200169246" target="_blank">Learn more…</a>]]></comment>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_cachebutton</frontend_model>
+			                <sort_order>36</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </cache>
+			            
+			            <chacheurl translate="label">
+                            <label>Purge single file cache / URL : </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>37</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </chacheurl>
+                        
+                        <cacheurlbutton translate="label">
+			                <label></label>
+			                <comment><![CDATA[Purge single file cache by URL]]></comment>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_cacheurlbutton</frontend_model>
+			                <sort_order>38</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </cacheurlbutton>
+                        
+                        <ipv46>
+                        	<label>Automatic IPv6</label>
+                            <comment><![CDATA[Enable IPv6 support. <a href="https://support.cloudflare.com/hc/en-us/articles/200168586" target="_blank">Learn more…</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+						</ipv46>
+						
+						<minify>
+							<label>Auto Minify (Web optimization)</label>
+                            <comment><![CDATA[Automatically minify JavaScript and CSS for your web pages, resulting in smaller scripts and faster load times. <a href="https://support.cloudflare.com/hc/en-us/articles/200168196" target="_blank">Learn more…</a>
+For immediate results, perform a cache purge to clear any non-minimized files from our cache.	]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cloudflare/system_config_source_dropdown_minify</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+						</minify>
+						
+						<async>
+							<label>Rocket Loader™ (Web optimization)</label>
+                            <comment><![CDATA[Automatically asynchronously load all JavaScript resources. Learn more…<a href="https://support.cloudflare.com/hc/en-us/articles/200168056" target="_blank">Learn more…</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cloudflare/system_config_source_dropdown_async</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+						</async> zone_grab
+                                          
+			            <zonegrab translate="label">
+			                <label>Snapshot update</label>
+			                <comment><![CDATA[Update the snapshot of site for CloudFlare's challenge page. Note: This API call can only be used once per day! <a href="http://blog.cloudflare.com/new-feature-customize-your-cloudflare-challen" target="_blank">Learn more…</a>]]></comment>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_zonegrabbutton</frontend_model>
+			                <sort_order>70</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </zonegrab>
+
+                    </fields>
+                </overview>
+
+				<threat translate="label">
+                    <label>Threat control</label>
+                    <comment><![CDATA[You can find Threat control in CloudFlare admin -> you domain analytics Threat control. <a href="https://support.cloudflare.com/hc/en-us/articles/200170146-What-do-the-items-in-Threat-Control-mean-" target="_blank">Learn more…</a>]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <sort_order>4</sort_order>
+                    <fields>
+                    	<threatip translate="label">
+                            <label>Whitelist/Blacklist/Unlist IPs / IP :</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>37</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </threatip>
+                        
+                       <whitelist translate="label">
+			                <label></label>
+			                <comment><![CDATA[Please click one of buttons above for add/remove entered IP from list.]]></comment>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_whitelist</frontend_model>
+			                <sort_order>38</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </whitelist>
+			            
+			            <blacklist translate="label">
+			                <label></label>
+			                <comment></comment>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_blacklist</frontend_model>
+			                <sort_order>38</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </blacklist>
+			            
+			            <unlist translate="label">
+			                <label></label>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_unlist</frontend_model>
+			                <sort_order>38</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </unlist>
+			            
+			            
+			            <iplist translate="label">
+			                <label>Show a list of IP address which hit your site for last 24 hours classified by type.</label>
+			                <comment><![CDATA[IP list be opened in new browser tab.]]></comment>
+			                <frontend_type>button</frontend_type>
+			                <frontend_model>cloudflare/adminhtml_system_config_form_iplist</frontend_model>
+			                <sort_order>39</sort_order>
+			                <show_in_default>1</show_in_default>
+			                <show_in_website>1</show_in_website>
+			                <show_in_store>0</show_in_store>
+			            </iplist>
+
+                    </fields>
+				</threat>
+				
+				<stats>
+					<label>Statistic</label>
+                    <comment><![CDATA[Retrieve the current stats and settings for a particular website. Please note - some values require CloudFlare Pro or Enterprise plans!]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <sort_order>5</sort_order>
+					<fields>
+						<stats translate="label comment">
+                            <label>Statistic period</label>
+                            <comment><![CDATA[The time interval for the statistics.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cloudflare/system_config_source_dropdown_stats</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>	
+                        </stats>
+						<statsload translate="label">
+				                <label></label>
+				                <frontend_type>button</frontend_type>
+				                <frontend_model>cloudflare/adminhtml_system_config_form_statsbutton</frontend_model>
+				                <sort_order>40</sort_order>
+				                <show_in_default>1</show_in_default>
+				                <show_in_website>1</show_in_website>
+				                <show_in_store></show_in_store>
+				                <comment><![CDATA[]]></comment>
+				        </statsload>
+					</fields>
+				</stats>
+			
+
+            </groups>
+        </cloudflare>
+    </sections>
+</config>

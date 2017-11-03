@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function check() {
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_cloudflare/check') ?>', {
+            method:     'post',
+            parameters: {api_email: $$('#cloudflare_apioptions_api_email')[0].value, api_key: $$('#cloudflare_apioptions_api_key')[0].value},
+            onSuccess: function(transport){
+				
+				var r = transport.responseText;
+				
+				console.log(r);
+			
+	            if (transport.responseText == 1){
+	                //if(confirm("API Access details correct! Now we load you current CloudFlare setting and reload the page.")){
+		                new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_cloudflare/loadconfig') ?>', {
+				            method:     'post',
+				            onSuccess: function(transport){
+								
+								console.log(transport.responseText);
+								window.location.reload();
+					            /*if (transport.responseText == 1){
+					                alert("CloduFare config data loaded!");					                
+					            }else{
+						            alert("Error in load CloudFlare config data.");
+									console.log(transport.responseText);
+					            }*/
+				            }
+				        });
+	               // }
+	            }else{
+		            alert("API Access details wrong! Please double check and try again.");
+					console.log(transport.responseText);
+	            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<?php echo $this->getButtonHtml() ?>

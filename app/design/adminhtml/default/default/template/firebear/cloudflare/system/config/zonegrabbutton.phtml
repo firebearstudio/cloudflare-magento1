@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    //<![CDATA[ 
+    function snapshotUpdate() {
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_cloudflare/zonegrab') ?>', {
+            method:     'post',
+            onSuccess: function(transport){
+				
+				console.log(transport.responseText);
+			
+	            if (transport.responseText == 1){
+	                alert("Site snapshot updated!");
+	            }else{
+		            alert("Error in update site snapshot");
+
+	            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<?php echo $this->getButtonHtml() ?>

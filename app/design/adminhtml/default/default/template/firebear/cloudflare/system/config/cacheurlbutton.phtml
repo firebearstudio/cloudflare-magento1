@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function cleanCacheUrl() {
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_cloudflare/cleancacheurl') ?>', {
+            method:     'post',            
+            parameters: {url: $$('#cloudflare_overview_chacheurl')[0].value},
+            onSuccess: function(transport){
+				
+				console.log(transport.responseText);
+			
+	            if (transport.responseText == 1){
+	                alert("Cache of file purged!");
+	            }else{
+		            alert("Error in purge single file cache");
+
+	            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<?php echo $this->getButtonHtml() ?>

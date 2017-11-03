@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function cleanCache() {
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_cloudflare/cleancache') ?>', {
+            method:     'post',
+            onSuccess: function(transport){
+				
+				console.log(transport.responseText);
+			
+	            if (transport.responseText == 1){
+	                alert("Cache cleaned!");
+	            }else{
+		            alert("Error in cache cleaning");
+
+	            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<?php echo $this->getButtonHtml() ?>

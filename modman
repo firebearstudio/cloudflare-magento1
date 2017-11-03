@@ -1,0 +1,4 @@
+app/code/community/Firebear/CloudFlare/ app/code/community/Firebear/CloudFlare/
+app/design/adminhtml/default/default/template/firebear/cloudflare app/design/adminhtml/default/default/template/firebear/cloudflare
+app/etc/modules/Firebear_CloudFlare.xml app/etc/modules/Firebear_CloudFlare.xml
+lib/CloudFlare lib/CloudFlare

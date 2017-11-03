@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    //<![CDATA[ 
+    function whiteList() {
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_cloudflare/iplist') ?>', {
+            method:     'post',
+            parameters: {ip: $$('#cloudflare_threat_threatip')[0].value, action : 'whitelist'},
+            onSuccess: function(transport){
+				
+				console.log(transport.responseText);
+			
+	            if (transport.responseText == 1){
+	                alert("IP added to white list!");
+	            }else{
+		            alert("Error in add ip to white list");
+
+	            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<?php echo $this->getButtonHtml() ?>

@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function getIpList() {
+       window.open(
+	   		'<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/adminhtml_cloudflare/getiplist'); ?>',
+	   		'_blank' // <- This is what makes it open in a new window.
+	   		); 
+    }
+    //]]>
+</script>
+
+<?php echo $this->getButtonHtml() ?>
