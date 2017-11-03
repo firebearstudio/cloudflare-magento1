@@ -37,4 +37,4 @@ Real visitor IP - if you use CloudFlare® with Magento store, you can’t get mo
 <img src="https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-extension-api_1.png" />
 <img src="https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-control-stats-threat_1.png" />
 <img src="https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-extension_1.png" />
-https://firebearstudio.com/media/catalog/product/cache/1/small_image/040ec09b1e35df139433887a97daa66f/m/a/magento-cloudflare-extension_1.png
+
