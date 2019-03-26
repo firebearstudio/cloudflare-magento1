@@ -1,0 +1,13 @@
+{
+    "name":        "firebearstudio/cloudflare-magento1",
+    "description": "Magenio Cloudflare integ.",
+    "type":        "magento-module",
+    "authors": [
+        {
+            "name":  "Firebearstudio"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
